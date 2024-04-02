@@ -1,0 +1,411 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Montessart -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- Roboto Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<!-- poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<!-- contact icon  -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+<style>
+*{
+  font-style: "Poppins", sans-serif;
+  color: #ffffff;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#nav {
+  list-style-type: none;
+  margin-top:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFD523;
+
+  /* changes from here on */
+  margin: 0 50px;
+  border-radius: 50px;
+  display: flex;
+  flex-shrink:0;
+  justify-content: space-evenly;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.247);
+}
+
+.li {
+  float: left;
+}
+
+.li a {
+  font-family:'Poppins', sans-serif ;
+  display: block;
+  color: #393f4d;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #393f4d;
+  border-radius: 25px;
+  color: #feda6a;
+  font-weight: bold;
+}
+.form-style button{
+
+  width: 89%;
+	height:70%;
+	padding: 3%;
+	background: #feda6a;
+	border-bottom: 2px solid #393f4d;;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #393f4d;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-style button:hover {
+  background-color: #393f4d;
+  color: #feda6a;
+  font-weight: bold;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+
+.left {
+  left: 15;
+  border-right: 0px #feda6a solid;
+}
+
+.right {
+  right: 0;
+  border-left: 1px #feda6a solid;
+}
+
+.mytext {
+    border:1px solid #393f4d;
+    border-right:none;
+    padding:4px;
+    margin:0px;
+    float:left;
+    height:32px;
+    overflow:hidden;
+    line-height:16px;
+    width: 300px;
+    margin-left: 54px;
+  }
+
+  .mic {
+      border:1px solid #393f4d;
+      background:#feda6a;
+      vertical-align:top;
+      padding:0px;
+      margin:0;
+      float:left;
+      height:42px;
+      overflow:hidden;
+      width:5em;
+      text-align:center;
+      line-height:16px;
+  }
+  
+
+.submit {
+    border:1px solid #393f4d;
+    height: 42px;
+    width: 160px;
+    text-align: center;
+    background-color: #feda6a;
+    color: #393f4d;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align:top;
+}
+.submit:hover {
+  background-color: #393f4d;
+  color: #feda6a;
+  font-weight: bold;
+}
+.td {
+  color: #feda6a;
+  font-weight: bold;
+  font-size: 20px;
+}
+head{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  background-color: #404040;
+  margin:0px ;
+  /* margin-bottom: 30px; */
+}
+
+.form-style{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+
+}
+.form-style h1, .form-style a{
+	padding: 20px 0;
+  font-size: 24px;
+	font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+	text-align: center;
+	margin: -16px -16px 16px -16px;
+  color:#feda6a
+}
+.form-style input[type="text"],
+.form-style input[type="password"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color:#0000a0 ;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="password"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus
+{
+	box-shadow: 0 0 5px #0000a0;
+	padding: 3%;
+	border: 1px solid #0000a0;
+}
+
+.site-form span,label{
+  color: #feda6a;
+}
+.errorlist{
+    color: red;
+    font-weight: bold;
+}
+
+/* my changes */
+
+/* about.html */
+.aboutDetails{
+  margin:0 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.creatorContainer{
+  display: flex;
+  justify-content: space-evenly;
+  padding:20px 50px;
+  gap:80px;
+  margin: 0 20px;
+  margin-top:20px;
+}
+
+.creatorContainer .card {
+      width: 300px;
+      background-color: #0000004b;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.creatorContainer .name {
+      color: #feda6a;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+.creatorContainer .description {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+/* home.html */
+  .form-style .button{
+    border-radius: 20px;
+  }
+
+/* contact.html */
+
+.contactContainer{
+  margin:20px 350px;
+  display: flex;
+  justify-content: space-evenly;
+  gap:100px;
+}
+.contactContainer .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000004b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* .contactContainer  .icon {
+  margin-right: 20px;
+}
+
+.contactContainer  .icon i {
+  font-size: 48px;
+  color: #007bff; /* Change icon color as needed */
+} */
+
+.contactContainer  .content {
+  flex: 1;
+  color:white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contactContainer  .content h2{
+  color:#feda6a;
+  font-size: 30px;
+  text-align: center;
+}
+.contactContainer  .content p{
+  font-size: 20px;
+  text-align: center;
+}
+.contactContainer .phone-number {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contactContainer .rounded-square {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom:20px;
+}
+
+/* footer  */
+.foot{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:#feda6a;
+  text-align: center;
+  background-color: #201b1b;
+  position: fixed;
+  bottom:0;
+  left:0;
+  padding:12px 0;
+  width: 100%;
+  z-index: 999;
+}
+</style>
+<title>Homepage</title>
+</head>
+
+<div style="background-color:#000000;
+color:#feda6a;
+padding:10 10 10 10;
+/* border: 1px #feda6a groove; */
+margin-bottom:0;
+/* border-radius: 20px;*/">
+
+<!-- main heading -->
+<h1 style="text-align: center;
+font-weight: 900;
+/* margin:10px; */
+font-family: 'Roboto Mono', monospace;
+font-size: 40px;
+margin-bottom: 0px;
+">VisioVoice</h1>
+
+<!-- tagline -->
+<h3 style="font-family: 'Montserrat', sans-serif;
+text-align:center;
+font-weight: 300;
+font-size: 15px;
+padding-bottom:5px;
+margin-bottom:10px;
+margin-top: 0;">Placeholder for a Tagline</h3>
+</div>
+
+<br>
+<body>
+<ul id="nav">
+  <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
+  <li class="li"><a href="{% url 'animation' %}">Convertor</a></li>
+  {% if not user.is_authenticated %}
+  <li class="li"><a href="{% url 'signup' %}">Sign Up</a></li>
+  {% endif %}
+  {% if user.is_authenticated %}
+  <li class="li"><a href="{% url 'logout' %}">Log-Out</a></li>
+  {% else %}
+    <li class="li"><a href="{% url 'login' %}">Log-in</a></li>
+  {% endif %}
+  <li class="li"><a href="{% url 'contact' %}">Contact</a></li>
+  <li class="li"><a href="{% url 'about' %}">About</a></li>
+</ul>
+
+<div class="wrapper" >
+  {% block content %}
+  {% endblock %}
+</div>
+<footer class="foot">
+  &copy;Copyright VisioVoice. All Rights Reserved 2024.  
+</footer>
+</body>
+</html>
