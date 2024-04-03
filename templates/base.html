@@ -22,7 +22,15 @@
   font-style: "Poppins", sans-serif;
   color: #ffffff;
 }
+h2{
+  font-family: 'Poppins',sans-serif;
+}
+html{
+  padding:0;
+  margin:0;
+}
 .center {
+  margin-top: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -33,10 +41,11 @@
   margin-top:0;
   padding: 0;
   overflow: hidden;
-  background-color: #FFD523;
+  background-color: #fdd83e;
 
   /* changes from here on */
-  margin: 0 50px;
+  padding:0 20px;
+  margin: 0 250px;
   border-radius: 50px;
   display: flex;
   flex-shrink:0;
@@ -52,38 +61,36 @@
 .li a {
   font-family:'Poppins', sans-serif ;
   display: block;
-  color: #393f4d;
-  font-size: 20px;
+  color: #000000;
+  font-size: 18px;
   font-weight: bold;
   padding: 13px 20px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #393f4d;
-  border-radius: 25px;
-  color: #feda6a;
+  color: #ffffff;
   font-weight: bold;
 }
 .form-style button{
 
-  width: 89%;
+  width: 65%;
 	height:70%;
 	padding: 3%;
-	background: #feda6a;
+	background: #fdd83e;
 	border-bottom: 2px solid #393f4d;;
 	border-top-style: none;
 	border-right-style: none;
 	border-left-style: none;
-	color: #393f4d;
+	color: #000000;
   font-weight: bold;
   font-size: 28px;
   font-family: 'Poppins', sans-serif;
 }
 
 .form-style button:hover {
-  background-color: #393f4d;
-  color: #feda6a;
+  background-color: #000000;
+  color: #fdd83e;
   font-weight: bold;
 }
 .split {
@@ -118,20 +125,25 @@ li a:hover {
     line-height:16px;
     width: 300px;
     margin-left: 54px;
+    /* myChanges */
+    border-radius: 20px;
   }
 
   .mic {
       border:1px solid #393f4d;
-      background:#feda6a;
+      background:#fdd83e;
       vertical-align:top;
       padding:0px;
       margin:0;
       float:left;
       height:42px;
       overflow:hidden;
-      width:5em;
+      width:4em;
       text-align:center;
       line-height:16px;
+      /* my changes */
+      border-radius: 50%;
+      margin-left:15px;
   }
   
 
@@ -140,22 +152,26 @@ li a:hover {
     height: 42px;
     width: 160px;
     text-align: center;
-    background-color: #feda6a;
-    color: #393f4d;
+    background-color: #fdd83e;
+    color: #000000;
     font-weight: bold;
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     vertical-align:top;
+    /* mychanges */
+    border-radius: 20px;
+
 }
 .submit:hover {
-  background-color: #393f4d;
-  color: #feda6a;
+  background-color: #fdd83e;
+  color: white;
   font-weight: bold;
 }
 .td {
   color: #feda6a;
   font-weight: bold;
   font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 head{
   margin: 0;
@@ -164,8 +180,8 @@ head{
 body
 {
   background-color: #404040;
-  margin:0px ;
-  /* margin-bottom: 30px; */
+  margin:0;
+  padding: 0;
 }
 
 .form-style{
@@ -206,11 +222,15 @@ body
 	-moz-box-sizing: border-box;
 	width: 100%;
 	background: #fff;
-	margin-bottom: 4%;
 	border: 1px solid #ccc;
 	padding: 3%;
 	color:#0000a0 ;
 	font: 95% Arial, Helvetica, sans-serif;
+  /* mychanges */
+  border-radius: 20px;
+  margin:10px 0;
+
+
 }
 .form-style input[type="text"]:focus,
 .form-style input[type="password"]:focus,
@@ -239,20 +259,58 @@ body
 
 /* my changes */
 
+/* base.html */
+.titleDiv{
+  background-color:#000000;
+  color:#feda6a;
+  margin-bottom: 7px;
+  padding:10px;
+  background: linear-gradient(to bottom,#000000, rgba(0, 0, 0, 0.644), #ffdf5300);
+  padding-top: 20px
+}
+
+.visioHead{
+  text-align: center;
+  font-weight: 900;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 45px;
+  margin-bottom: 5px;
+  margin-top:0;
+}
+.visioTagline{
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  font-weight: 300;
+  font-size: 15px;
+  color: #feda6a;
+  padding-bottom:5px;
+  margin-top: 0;
+}
+
+
 /* about.html */
+.aboutHead{
+  text-align: center;
+	font-family:'Poppins', sans-serif ;
+	font-weight: 600;
+	margin:30px 600px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	background-color:#595260;
+}
 .aboutDetails{
   margin:0 80px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
   text-align: center;
 }
 .creatorContainer{
   display: flex;
   justify-content: space-evenly;
-  padding:20px 50px;
+  padding:20px 0px;
   gap:80px;
-  margin: 0 20px;
+  margin: 0 100px;
   margin-top:20px;
 }
 
@@ -309,7 +367,7 @@ body
 
 .contactContainer  .icon i {
   font-size: 48px;
-  color: #007bff; /* Change icon color as needed */
+  color: #007bff; 
 } */
 
 .contactContainer  .content {
@@ -319,11 +377,11 @@ body
 }
 .contactContainer  .content h2{
   color:#feda6a;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
 }
 .contactContainer  .content p{
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 .contactContainer .phone-number {
@@ -338,6 +396,12 @@ body
   border-radius: 10px;
   padding: 10px 20px;
   margin-bottom:20px;
+  cursor:pointer;
+}
+
+.contactContainer .rounded-square:hover {
+  color:white;
+  background-color: #000000;
 }
 
 /* footer  */
@@ -352,38 +416,18 @@ body
   padding:12px 0;
   width: 100%;
   z-index: 999;
-}
+  }
 </style>
 <title>Homepage</title>
 </head>
 
-<div style="background-color:#000000;
-color:#feda6a;
-padding:10 10 10 10;
-/* border: 1px #feda6a groove; */
-margin-bottom:0;
-/* border-radius: 20px;*/">
-
-<!-- main heading -->
-<h1 style="text-align: center;
-font-weight: 900;
-/* margin:10px; */
-font-family: 'Roboto Mono', monospace;
-font-size: 40px;
-margin-bottom: 0px;
-">VisioVoice</h1>
-
-<!-- tagline -->
-<h3 style="font-family: 'Montserrat', sans-serif;
-text-align:center;
-font-weight: 300;
-font-size: 15px;
-padding-bottom:5px;
-margin-bottom:10px;
-margin-top: 0;">Placeholder for a Tagline</h3>
+<div class="titleDiv">
+  <!-- main heading -->
+  <h1 class="visioHead">VisioVoice</h1>
+  <!-- tagline -->
+  <h3 class="visioTagline">Placeholder for a Tagline</h3>
 </div>
-
-<br>
+<!-- <br> -->
 <body>
 <ul id="nav">
   <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
